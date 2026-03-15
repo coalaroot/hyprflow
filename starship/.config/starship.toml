@@ -39,7 +39,7 @@ format = "[$symbol$version]($style) "
 disabled = false
 style = "fg:#00ccff"
 format = "[ $time]($style)"
-time_format = "%I:%M:%S %p"
+time_format = "%_H:%M:%S"
 
 [character]
 disabled = true
