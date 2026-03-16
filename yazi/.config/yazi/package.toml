@@ -1,0 +1,7 @@
+[plugin]
+deps = []
+
+[[flavor.deps]]
+use = "Miuzarte/synthwave84"
+rev = "865bef9"
+hash = "598126216cc2ab55f98955788f0eb3f3"

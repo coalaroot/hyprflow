@@ -1,0 +1,9 @@
+[flavor]
+dark = "synthwave84"
+
+[filetype]
+
+rules = [
+	{ url = "*" },
+	{ url = "*/", fg = "#03edf9" },
+]

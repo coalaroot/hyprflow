@@ -1,0 +1,16 @@
+[opener]
+edit = [
+  { run = 'code "$@"', desc = "VSCode", block = false, orphan = true },
+]
+open_dir = [
+  { run = 'code "$@"', desc = "VSCode", block = false, orphan = true },
+]
+
+[open]
+rules = [
+  # Folders
+  { name = "*/", use = "open_dir" },
+  # Text / code / config files
+  { mime = "text/*", use = "edit" },
+  { name = "*.{jsx,tsx,ts,js,json,jsonc,yaml,yml,toml,conf,config,ini,env,md,mdx,txt,xml,html,css,scss,sass,less,sh,bash,zsh,fish,lua,py,rb,rs,go,c,cpp,h,hpp,java,kt,swift,vue,svelte,astro,lock,log}", use = "edit" },
+]
