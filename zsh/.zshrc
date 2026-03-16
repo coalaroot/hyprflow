@@ -27,6 +27,8 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
+alias e='eza'
+
 # Tools
 fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
 source <(fzf --zsh)
