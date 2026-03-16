@@ -17,7 +17,7 @@
     "pulseaudio",
     "network",
     "battery",
-    "swaync",
+    "custom/swaync",
     "custom/power",
   ],
 
@@ -60,10 +60,21 @@
     "format-critical": " {capacity}%"
   },
 
-  "swaync": {
-    "format": "",
-    "tooltip": false,
-    "on-click": "swaync-client -t"
+  "custom/swaync": {
+    "format": "{icon}{0}",
+    "format-icons": {
+      "none": "",
+      "notification": " ",
+      "dnd-none": "",
+      "dnd-notification": " "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb | stdbuf -oL sed 's/\"text\": \"0\"/\"text\": \"\"/'",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+    "tooltip": false
   },
 
   "tray": {
