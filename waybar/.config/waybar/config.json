@@ -1,11 +1,8 @@
 {
   "layer": "top",
   "position": "top",
-
-
-
   "modules-left": [
-      "clock",
+      "clock"
   ],
 
   "modules-center": [
@@ -18,7 +15,7 @@
     "network",
     "battery",
     "custom/swaync",
-    "custom/power",
+    "custom/power"
   ],
 
   "hyprland/workspaces": {
@@ -42,7 +39,7 @@
   "pulseaudio": {
     "format": " {volume}%",
     "format-muted": " muted",
-    "on-click": "pavucontrol"
+    "on-click": "kitty pulsemixer"
   },
 
   "network": {
@@ -85,5 +82,5 @@
     "format": "",
     "on-click": "wlogout",
     "tooltip": false
-  },
+  }
 }

@@ -19,6 +19,7 @@ setopt appendhistory
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
+export PATH="$HOME/flowis/programs:$PATH"
 
 # Aliases (lsd)
 alias ls='lsd'
@@ -28,6 +29,7 @@ alias lla='ls -la'
 alias lt='ls --tree'
 
 alias e='eza'
+alias cpp='clipcopy'
 
 # Tools
 fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
