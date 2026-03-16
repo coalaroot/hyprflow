@@ -30,6 +30,7 @@ alias lt='ls --tree'
 
 alias e='eza'
 alias cpp='clipcopy'
+alias c='claude'
 
 # Tools
 fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
