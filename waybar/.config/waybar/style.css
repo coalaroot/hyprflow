@@ -1,0 +1,45 @@
+/* ===== Celestial Waybar (Dark Minimal) ===== */
+
+window#waybar {
+    background-color: rgba(20, 20, 28, 0.70);
+    color: #dcdcff;
+    font-size: 14px;
+    font-family: JetBrains Mono, sans-serif;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 4px 10px;
+    margin: 4px 4px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #aaa;
+}
+
+#workspaces button.active {
+    background: #7a42f5;
+    color: white;
+}
+
+/* Center window title */
+#window {
+    padding: 0 14px;
+    color: #e8e8ff;
+}
+
+/* Right modules */
+#clock, #battery, #network, #pulseaudio, #swaync, #custom-power {
+    padding: 0 12px;
+    margin: 0 4px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+}
+
+#tray {
+    margin-right: 8px;
+}
+
+/* Small transitions */
+* {
+    transition: 0.2s ease-in-out;
+}

@@ -1,0 +1,78 @@
+{
+  "layer": "top",
+  "position": "top",
+
+
+
+  "modules-left": [
+      "clock",
+  ],
+
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "network",
+    "battery",
+    "swaync",
+    "custom/power",
+  ],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}",
+    "persistent-workspaces": {
+  		"Virtual-1": [1, 2, 3, 4, 5]
+    }
+  },
+
+  "hyprland/window": {
+    "format": "{}"
+  },
+
+  "clock": {
+    "format": "{:%A, %d %B - %H:%M}",
+    "tooltip-format": "{:%A, %d %B %Y}"
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": " muted",
+    "on-click": "pavucontrol"
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": " wired",
+    "format-disconnected": "",
+    "max-length": 20,
+    "on-click": "nm-connection-editor"
+  },
+
+  "battery": {
+    "format": "{capacity}%",
+    "format-full": " {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-critical": " {capacity}%"
+  },
+
+  "swaync": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "swaync-client -t"
+  },
+
+  "tray": {
+    "spacing": 12
+  },
+
+  "custom/power": {
+    "format": "",
+    "on-click": "wlogout",
+    "tooltip": false
+  },
+}

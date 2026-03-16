@@ -1,0 +1,209 @@
+/* Synthwave 84 — swaync theme */
+
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 14px;
+}
+
+/* ── Notification Center panel ─────────────── */
+.control-center {
+  background: #100a24;
+  border: 1px solid #2a2139;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.control-center-list-placeholder {
+  color: #444251;
+  font-size: 12px;
+}
+
+/* ── Header row (title + clear button) ──────── */
+.widget-title {
+  color: #ffade8;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 10px 4px 10px;
+}
+
+.widget-title > button {
+  background: #241b2f;
+  color: #03edf9;
+  border: 1px solid #2a2139;
+  border-radius: 6px;
+  padding: 2px 10px;
+}
+
+.widget-title > button:hover {
+  background: #34294f;
+  border-color: #03edf9;
+}
+
+/* ── Do Not Disturb toggle ──────────────────── */
+.widget-dnd {
+  color: #ffade8;
+  padding: 4px 10px;
+}
+
+.widget-dnd > switch {
+  background: #241b2f;
+  border: 1px solid #2a2139;
+  border-radius: 10px;
+}
+
+.widget-dnd > switch:checked {
+  background: #ff6c11;
+  border-color: #ff6c11;
+}
+
+.widget-dnd > switch slider {
+  background: #ffade8;
+  border-radius: 50%;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+/* ── Individual notifications ───────────────── */
+.notification-row {
+  margin: 2px 0;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+  background: transparent;
+}
+
+.notification {
+  background: #241b2f;
+  border: 1px solid #34294f;
+  border-radius: 10px;
+  padding: 14px;
+  margin: 2px 4px;
+}
+
+.notification:hover {
+  border-color: #03edf9;
+}
+
+/* Urgency levels */
+.notification.critical {
+  border-color: #fe4450;
+  box-shadow: 0 0 8px rgba(254, 68, 80, 0.3);
+}
+
+.notification.low {
+  border-color: #2a2139;
+}
+
+/* ── Notification content ───────────────────── */
+.notification-content {
+  padding: 0;
+}
+
+.notification-default-action {
+  background: transparent;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.notification-default-action:hover {
+  background: #34294f;
+}
+
+.app-name {
+  color: #03edf9;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.app-icon {
+  margin-right: 6px;
+}
+
+.summary {
+  color: #ffade8;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.body {
+  color: #dddddd;
+  font-size: 12px;
+}
+
+.time {
+  color: #72f1b8;
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+/* ── Dismiss button ─────────────────────────── */
+.notification > .close-button {
+  background: #2a2139;
+  color: #ffade8;
+  border: none;
+  border-radius: 50%;
+  min-width: 18px;
+  min-height: 18px;
+  padding: 0;
+  font-size: 10px;
+}
+
+.notification > .close-button:hover {
+  background: #fe4450;
+  color: #100a24;
+}
+
+/* ── Notification action buttons ────────────── */
+.notification-action {
+  background: #2a2139;
+  color: #ffade8;
+  border: 1px solid #34294f;
+  border-radius: 6px;
+  padding: 3px 10px;
+  margin: 2px;
+}
+
+.notification-action:hover {
+  background: #34294f;
+  border-color: #ff6c11;
+  color: #ff6c11;
+}
+
+/* ── Popup notifications (floating toasts) ──── */
+.floating-notifications {
+  background: transparent;
+}
+
+.blank-window {
+  background: transparent;
+}
+
+.notification-popup-wrapper {
+  margin: 8px;
+}
+
+/* Popup-specific: stronger border + glow so it stands out over the wallpaper */
+.notification-popup {
+  border: 1px solid #03edf9;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(3, 237, 249, 0.25),
+              0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.notification-popup .notification {
+  border: none;
+  border-radius: 10px;
+  background: #1a0e35;
+  padding: 14px;
+  margin: 0;
+}
+
+.notification-popup .notification.critical {
+  border: 1px solid #fe4450;
+  box-shadow: 0 4px 24px rgba(254, 68, 80, 0.35);
+}
