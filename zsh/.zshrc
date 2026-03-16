@@ -35,3 +35,4 @@ source <(fzf --zsh)
 source "/home/jakub/.openclaw/completions/openclaw.zsh"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+eval $(keychain --eval --quiet ~/.ssh/id_ed25519)
