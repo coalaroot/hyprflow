@@ -16,11 +16,7 @@ button {
   background-repeat: no-repeat;
   background-position: center 35%;
   background-size: 80px;
-  transition:
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 button:hover {
@@ -34,7 +30,7 @@ button:hover {
 
 button:focus {
   outline: none;
-  background-size: 86px;
+  background-size: 106px;
   border-color: #ff6c11;
   color: #ff6c11;
   box-shadow: 0 0 24px rgba(255, 110, 17, 0.22);
