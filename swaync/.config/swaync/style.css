@@ -17,6 +17,19 @@
   background: transparent;
 }
 
+scrolledwindow,
+scrolledwindow > viewport,
+scrolledwindow > viewport > box,
+.control-center > box,
+.control-center > box > box,
+.notification-group,
+.notification-group-headers,
+.notification-group-icon,
+.notification-group-collapse-button {
+  background: transparent;
+  background-color: transparent;
+}
+
 .control-center-list-placeholder {
   color: #444251;
   font-size: 12px;
@@ -102,16 +115,25 @@
 /* ── Notification content ───────────────────── */
 .notification-content {
   padding: 0;
+  border: none;
 }
 
-.notification-default-action {
+.notification-default-action,
+.notification-default-action:hover,
+.notification-default-action:focus,
+.notification-default-action:active,
+.notification-default-action:checked {
   background: transparent;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  box-shadow: none;
   border-radius: 8px;
   padding: 4px;
 }
 
 .notification-default-action:hover {
-  background: #34294f;
+  background-color: #34294f;
 }
 
 .app-name {
@@ -191,8 +213,9 @@
 .notification-popup {
   border: 1px solid #03edf9;
   border-radius: 10px;
-  box-shadow: 0 4px 24px rgba(3, 237, 249, 0.25),
-              0 2px 8px rgba(0, 0, 0, 0.7);
+  box-shadow:
+    0 4px 24px rgba(3, 237, 249, 0.25),
+    0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .notification-popup .notification {
