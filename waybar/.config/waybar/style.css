@@ -28,7 +28,7 @@ window#waybar {
 }
 
 /* Right modules */
-#clock, #battery, #network, #pulseaudio, #bluetooth, #custom-swaync, #custom-power {
+#clock, #battery, #network, #pulseaudio, #bluetooth, #custom-weather, #custom-swaync, #custom-power {
     padding: 0 12px;
     margin: 0 4px;
     background: rgba(255, 255, 255, 0.04);

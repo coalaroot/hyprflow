@@ -1,13 +1,9 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": [
-      "clock"
-  ],
+  "modules-left": ["clock", "custom/weather"],
 
-  "modules-center": [
-    "hyprland/workspaces"
-  ],
+  "modules-center": ["hyprland/workspaces"],
 
   "modules-right": [
     "tray",
@@ -24,7 +20,7 @@
     "all-outputs": true,
     "format": "{name}",
     "persistent-workspaces": {
-  		"Virtual-1": [1, 2, 3, 4, 5]
+      "Virtual-1": [1, 2, 3, 4, 5]
     }
   },
 
@@ -33,7 +29,7 @@
   },
 
   "clock": {
-    "format": "{:%A, %d %B - %H:%M}",
+    "format": "{:%H:%M -- %A -- %d.%m}",
     "tooltip-format": "{:%A, %d %B %Y}"
   },
 
@@ -41,6 +37,14 @@
     "format": " {volume}%",
     "format-muted": " muted",
     "on-click": "kitty pulsemixer"
+  },
+
+  "custom/weather": {
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "return-type": "json",
+    "interval": 1800,
+    "tooltip": true,
+    "on-click": "kitty --hold curl 'wttr.in'"
   },
 
   "bluetooth": {
