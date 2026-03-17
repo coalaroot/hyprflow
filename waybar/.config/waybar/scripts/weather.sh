@@ -1,13 +1,17 @@
 #!/bin/bash
 
-DATA=$(curl -s "wttr.in/?format=j1" 2>/dev/null)
+for i in 1 2 3 4 5; do
+  DATA=$(curl -s --max-time 10 "wttr.in/?format=j1" 2>/dev/null)
+  TEMP=$(echo "$DATA" | jq -r '.current_condition[0].temp_C // empty' 2>/dev/null)
+  [ -n "$TEMP" ] && break
+  [ "$i" -lt 5 ] && sleep 10
+done
 
-if [ -z "$DATA" ]; then
+if [ -z "$TEMP" ]; then
   echo '{"text": "󰖑 N/A", "tooltip": "Weather unavailable"}'
   exit
 fi
 
-TEMP=$(echo "$DATA" | jq -r '.current_condition[0].temp_C')
 FEELS=$(echo "$DATA" | jq -r '.current_condition[0].FeelsLikeC')
 DESC=$(echo "$DATA" | jq -r '.current_condition[0].weatherDesc[0].value')
 HUMIDITY=$(echo "$DATA" | jq -r '.current_condition[0].humidity')

@@ -43,6 +43,7 @@
     "return-type": "json",
     "interval": 1800,
     "tooltip": true,
+    "restart-interval": 10,
     "on-click": "kitty --hold curl 'wttr.in'"
   },
 

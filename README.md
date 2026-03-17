@@ -23,6 +23,7 @@ Personal Hyprland dotfiles. Managed with GNU Stow.
 | Notifications           | Swaync          |
 | Wallpaper               | Waypaper + swww |
 | Display layout          | Kanshi          |
+| Display manager         | SDDM (sddm-astronaut-theme) |
 | Lock screen             | Hyprlock        |
 | Logout menu             | Wlogout         |
 | OSD (volume/brightness) | Swayosd         |
@@ -82,5 +83,12 @@ Personal Hyprland dotfiles. Managed with GNU Stow.
 ## Deployment
 
 ```bash
-stow -t ~ hypr kitty rofi waybar yazi wlogout zsh starship
+# User configs (~)
+stow -t ~ hypr kitty rofi waybar yazi wlogout zsh starship swaync
+```
+
+SDDM theme is installed separately via [sddm-astronaut-theme](https://github.com/keyitdev/sddm-astronaut-theme):
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"
 ```
