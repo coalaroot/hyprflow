@@ -9,8 +9,7 @@
     "tray",
     "bluetooth",
     "pulseaudio",
-    "network",
-    "battery",
+    "custom/battery",
     "custom/swaync",
     "custom/power"
   ],
@@ -35,7 +34,7 @@
 
   "pulseaudio": {
     "format": " {volume}%",
-    "format-muted": " muted",
+    "format-muted": "muted",
     "on-click": "kitty pulsemixer"
   },
 
@@ -65,11 +64,12 @@
     "on-click": "nm-connection-editor"
   },
 
-  "battery": {
-    "format": "{capacity}%",
-    "format-full": " {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-critical": " {capacity}%"
+  "custom/battery": {
+    "exec": "~/.config/waybar/scripts/battery.sh",
+    "return-type": "json",
+    "interval": 30,
+    "tooltip": true,
+    "on-click": "~/.config/waybar/scripts/battery-toggle.sh"
   },
 
   "custom/swaync": {
