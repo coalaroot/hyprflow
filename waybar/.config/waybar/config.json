@@ -34,7 +34,7 @@
 
   "pulseaudio": {
     "format": " {volume}%",
-    "format-muted": "muted",
+    "format-muted": "󰝟 muted",
     "on-click": "kitty pulsemixer"
   },
 
@@ -95,7 +95,7 @@
 
   "custom/power": {
     "format": "",
-    "on-click": "wlogout",
+    "on-click": "wlogout -b 5 --margin-top 350 --margin-bottom 350 --margin-left 200 --margin-right 200 -c 10 -r 10",
     "tooltip": false
   }
 }
