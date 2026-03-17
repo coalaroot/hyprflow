@@ -11,6 +11,7 @@
 
   "modules-right": [
     "tray",
+    "bluetooth",
     "pulseaudio",
     "network",
     "battery",
@@ -40,6 +41,16 @@
     "format": " {volume}%",
     "format-muted": " muted",
     "on-click": "kitty pulsemixer"
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias} ({controller_address})",
+    "tooltip-format-connected": "{controller_alias}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias} ({device_address})",
+    "on-click": "kitty --class bluetui bluetui"
   },
 
   "network": {
