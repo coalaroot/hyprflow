@@ -1,0 +1,72 @@
+# Synthwave 84 — eza theme
+
+filekinds:
+  normal:
+    foreground: {r: 255, g: 108, b: 17}    # orange  #ff6c11
+  directory:
+    foreground: {r: 3,   g: 237, b: 249}   # cyan    #03edf9
+    is_bold: true
+  symlink:
+    foreground: {r: 255, g: 126, b: 219}   # pink    #ff7edb
+  executable_file:
+    foreground: {r: 114, g: 241, b: 184}   # green   #72f1b8
+  special:
+    foreground: {r: 255, g: 216, b: 61}    # yellow  #ffd83d
+  broken_symlink:
+    foreground: {r: 254, g: 68,  b: 80}    # red     #fe4450
+
+perms:
+  user_read:
+    foreground: {r: 3,   g: 237, b: 249}   # cyan
+  user_write:
+    foreground: {r: 255, g: 108, b: 17}    # orange
+  user_execute_file:
+    foreground: {r: 114, g: 241, b: 184}   # green
+  user_execute_other:
+    foreground: {r: 114, g: 241, b: 184}
+  group_read:
+    foreground: {r: 68,  g: 66,  b: 81}    # surface2
+  group_write:
+    foreground: {r: 68,  g: 66,  b: 81}
+  group_execute:
+    foreground: {r: 68,  g: 66,  b: 81}
+  other_read:
+    foreground: {r: 42,  g: 33,  b: 57}    # surface0
+  other_write:
+    foreground: {r: 42,  g: 33,  b: 57}
+  other_execute:
+    foreground: {r: 42,  g: 33,  b: 57}
+
+size:
+  number_byte:
+    foreground: {r: 114, g: 241, b: 184}   # green
+  number_kilo:
+    foreground: {r: 3,   g: 237, b: 249}   # cyan
+  number_mega:
+    foreground: {r: 255, g: 216, b: 61}    # yellow
+  number_giga:
+    foreground: {r: 255, g: 108, b: 17}    # orange
+  number_huge:
+    foreground: {r: 254, g: 68,  b: 80}    # red
+
+date:
+  hour_old:
+    foreground: {r: 221, g: 221, b: 221}   # subtext0
+  day_old:
+    foreground: {r: 255, g: 174, b: 232}   # pink/text
+  older:
+    foreground: {r: 68,  g: 66,  b: 81}    # surface2
+
+git:
+  new:
+    foreground: {r: 114, g: 241, b: 184}   # green
+  modified:
+    foreground: {r: 255, g: 216, b: 61}    # yellow
+  deleted:
+    foreground: {r: 254, g: 68,  b: 80}    # red
+  renamed:
+    foreground: {r: 3,   g: 237, b: 249}   # cyan
+  ignored:
+    foreground: {r: 68,  g: 66,  b: 81}    # surface2
+  conflicted:
+    foreground: {r: 179, g: 0,   b: 101}   # magenta

@@ -28,7 +28,8 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
-alias e='eza'
+export EZA_COLORS="di=38;2;3;237;249:fi=38;2;255;108;17:ln=38;2;255;126;219:ex=38;2;114;241;184"
+alias e='eza -s=type --icons=always'
 alias cpp='clipcopy'
 alias c='claude'
 alias o='xdg-open'
