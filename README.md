@@ -4,12 +4,12 @@ Personal Hyprland dotfiles. Managed with GNU Stow.
 
 ## System
 
-|                |                          |
-| -------------- | ------------------------ |
-| **OS**         | Fedora Linux             |
-| **Compositor** | Hyprland (Wayland)       |
+|                |                                                                                                                       |
+| -------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **OS**         | Fedora Linux                                                                                                          |
+| **Compositor** | Hyprland (Wayland)                                                                                                    |
 | **Theme**      | <span style="color:#03edf9">Synth</span><span style="color:#ff6c11">wave</span> <span style="color:#ff7edb">84</span> |
-| **Font**       | JetBrains Mono Nerd Font |
+| **Font**       | JetBrains Mono Nerd Font                                                                                              |
 
 ## Core
 
@@ -60,29 +60,24 @@ Personal Hyprland dotfiles. Managed with GNU Stow.
 
 ## Keybinds (SUPER + ...)
 
-| Key       | Action                  |
-| --------- | ----------------------- |
-| `Q`       | Kill window             |
-| `F`       | Fullscreen              |
-| `V`       | Toggle floating         |
-| `P`       | Toggle pseudo (dwindle) |
-| `J`       | Toggle split            |
-| `A`       | VSCode                  |
-| `C`       | Chrome                  |
-| `X`       | Terminal (projects)     |
-| `E`       | Yazi file manager       |
-| `M`       | Pulsemixer (float)      |
-| `W`       | Rofi launcher           |
-| `L`       | Wlogout                 |
-| `T`       | TickTick                |
-| `O`       | OBS                     |
-| `B`       | Bambu Studio            |
-| `U`       | Waypaper                |
-| `I`       | Switch keyboard layout  |
-| `N`       | Notification center     |
-| `S`       | Screenshot window       |
-| `SHIFT+S` | Screenshot region       |
-| `Z`       | Scratchpad toggle       |
+| Key       | Action                 |
+| --------- | ---------------------- |
+| `Q`       | Kill window            |
+| `F`       | Fullscreen             |
+| `V`       | Toggle floating        |
+| `A`       | VSCode                 |
+| `C`       | Chrome                 |
+| `X`       | Terminal (projects)    |
+| `E`       | Yazi file manager      |
+| `M`       | Pulsemixer (float)     |
+| `W`       | Rofi launcher          |
+| `L`       | Wlogout                |
+| `U`       | Waypaper               |
+| `I`       | Switch keyboard layout |
+| `N`       | Notification center    |
+| `S`       | Screenshot window      |
+| `SHIFT+S` | Screenshot region      |
+| `Z`       | Scratchpad toggle      |
 
 ## Deployment
 
