@@ -1,5 +1,5 @@
 * {
-  font-size: 30lpx;
+  font-size: 30px;
 }
 
 window {
@@ -15,7 +15,7 @@ button {
   padding: 0;
   background-repeat: no-repeat;
   background-position: center 35%;
-  background-size: 48px;
+  background-size: 80px;
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease,
@@ -24,18 +24,17 @@ button {
 }
 
 button:hover {
-  /* background-color: rgba(3, 237, 249, 0.1); */
   border-color: #03edf9;
   color: #03edf9;
   box-shadow:
     0 0 24px rgba(3, 237, 249, 0.22),
     inset 0 0 20px rgba(3, 237, 249, 0.05);
-  background-size: 52px;
+  background-size: 86px;
 }
 
 button:focus {
   outline: none;
-  /* background-color: rgba(255, 110, 17, 0.1); */
+  background-size: 86px;
   border-color: #ff6c11;
   color: #ff6c11;
   box-shadow: 0 0 24px rgba(255, 110, 17, 0.22);
