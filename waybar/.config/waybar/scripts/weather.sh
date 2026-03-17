@@ -2,7 +2,7 @@
 
 for i in 1 2 3 4 5; do
   DATA=$(curl -s --max-time 10 "wttr.in/?format=j1" 2>/dev/null)
-  TEMP=$(echo "$DATA" | jq -r '.current_condition[0].temp_C // empty' 2>/dev/null)
+  TEMP=$(echo "$DATA" | jq -r '.data.current_condition[0].temp_C // empty' 2>/dev/null)
   [ -n "$TEMP" ] && break
   [ "$i" -lt 5 ] && sleep 10
 done
@@ -12,13 +12,13 @@ if [ -z "$TEMP" ]; then
   exit
 fi
 
-FEELS=$(echo "$DATA" | jq -r '.current_condition[0].FeelsLikeC')
-DESC=$(echo "$DATA" | jq -r '.current_condition[0].weatherDesc[0].value')
-HUMIDITY=$(echo "$DATA" | jq -r '.current_condition[0].humidity')
-LOCATION=$(echo "$DATA" | jq -r '.nearest_area[0].areaName[0].value')
-COUNTRY=$(echo "$DATA" | jq -r '.nearest_area[0].country[0].value')
-MIN=$(echo "$DATA" | jq -r '.weather[0].mintempC')
-MAX=$(echo "$DATA" | jq -r '.weather[0].maxtempC')
+FEELS=$(echo "$DATA" | jq -r '.data.current_condition[0].FeelsLikeC')
+DESC=$(echo "$DATA" | jq -r '.data.current_condition[0].weatherDesc[0].value')
+HUMIDITY=$(echo "$DATA" | jq -r '.data.current_condition[0].humidity')
+LOCATION=$(echo "$DATA" | jq -r '.data.nearest_area[0].areaName[0].value // empty')
+COUNTRY=$(echo "$DATA" | jq -r '.data.nearest_area[0].country[0].value // empty')
+MIN=$(echo "$DATA" | jq -r '.data.weather[0].mintempC')
+MAX=$(echo "$DATA" | jq -r '.data.weather[0].maxtempC')
 
 case "$DESC" in
   *"Sunny"*|*"Clear"*)           ICON="󰖙" ;;
@@ -32,6 +32,7 @@ case "$DESC" in
 esac
 
 TEXT="${ICON} ${TEMP}°C  ↓${MIN}° ↑${MAX}°"
-TOOLTIP="${LOCATION}, ${COUNTRY}\n${DESC}\nFeels like: ${FEELS}°C\nHumidity: ${HUMIDITY}%"
+PLACE="${LOCATION:+${LOCATION}, }${COUNTRY}"
+TOOLTIP="${PLACE:+${PLACE}\n}${DESC}\nFeels like: ${FEELS}°C\nHumidity: ${HUMIDITY}%"
 
 printf '{"text": "%s", "tooltip": "%s"}\n' "$TEXT" "$TOOLTIP"
