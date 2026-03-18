@@ -2,9 +2,7 @@
   "layer": "top",
   "position": "top",
   "modules-left": ["clock", "custom/weather"],
-
   "modules-center": ["hyprland/workspaces"],
-
   "modules-right": [
     "tray",
     "bluetooth",
@@ -13,6 +11,21 @@
     "custom/swaync",
     "custom/power"
   ],
+
+  "clock": {
+    "format": "{:%H:%M ⎯ %A ⎯ %d.%m}",
+    "tooltip-format": "{:%A, %d %B %Y}",
+    "on-click": "hyprctl dispatch exec '[float;size 1200 1000;center] gnome-calendar'"
+  },
+
+  "custom/weather": {
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "return-type": "json",
+    "interval": 1800,
+    "tooltip": true,
+    "restart-interval": 10,
+    "on-click": "hyprctl dispatch exec '[float;size 1200 1200;center] kitty --hold curl 'wttr.in''"
+  },
 
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -23,29 +36,8 @@
     }
   },
 
-  "hyprland/window": {
-    "format": "{}"
-  },
-
-  "clock": {
-    "format": "{:%H:%M ⎯ %A ⎯ %d.%m}",
-    "tooltip-format": "{:%A, %d %B %Y}",
-    "on-click": "hyprctl dispatch exec '[float;size 1200 1000;center] gnome-calendar'"
-  },
-
-  "pulseaudio": {
-    "format": " {volume}%",
-    "format-muted": "󰝟 muted",
-    "on-click": "kitty pulsemixer"
-  },
-
-  "custom/weather": {
-    "exec": "~/.config/waybar/scripts/weather.sh",
-    "return-type": "json",
-    "interval": 1800,
-    "tooltip": true,
-    "restart-interval": 10,
-    "on-click": "kitty --hold curl 'wttr.in'"
+  "tray": {
+    "spacing": 12
   },
 
   "bluetooth": {
@@ -55,15 +47,13 @@
     "tooltip-format": "{controller_alias} ({controller_address})",
     "tooltip-format-connected": "{controller_alias}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias} ({device_address})",
-    "on-click": "kitty --class bluetui bluetui"
+    "on-click": "hyprctl dispatch exec '[float;size 1200 600;center] kitty --class bluetui bluetui'"
   },
 
-  "network": {
-    "format-wifi": "  {essid}",
-    "format-ethernet": " wired",
-    "format-disconnected": "",
-    "max-length": 20,
-    "on-click": "nm-connection-editor"
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": "󰝟 muted",
+    "on-click": "hyprctl dispatch exec '[float;size 1200 800;center] kitty pulsemixer'"
   },
 
   "custom/battery": {
@@ -91,13 +81,17 @@
     "tooltip": false
   },
 
-  "tray": {
-    "spacing": 12
-  },
-
   "custom/power": {
     "format": "",
     "on-click": "wlogout",
     "tooltip": false
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": " wired",
+    "format-disconnected": "",
+    "max-length": 20,
+    "on-click": "nm-connection-editor"
   }
 }
