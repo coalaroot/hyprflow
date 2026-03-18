@@ -28,8 +28,9 @@
   },
 
   "clock": {
-    "format": "{:%H:%M -- %A -- %d.%m}",
-    "tooltip-format": "{:%A, %d %B %Y}"
+    "format": "{:%H:%M ⎯ %A ⎯ %d.%m}",
+    "tooltip-format": "{:%A, %d %B %Y}",
+    "on-click": "hyprctl dispatch exec '[float;size 1200 1000;center] gnome-calendar'"
   },
 
   "pulseaudio": {
