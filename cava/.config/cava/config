@@ -1,0 +1,16 @@
+[general]
+framerate = 20
+bars = 10
+
+[input]
+method = fifo
+source = /tmp/mpd.fifo
+sample_rate = 44100
+sample_bits = 16
+channels = 2
+
+[output]
+method = raw
+raw_target = /dev/stdout
+data_format = ascii
+ascii_max_range = 7

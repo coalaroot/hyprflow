@@ -36,6 +36,7 @@ Personal Hyprland dotfiles. Managed with GNU Stow.
 | File manager | Yazi       |
 | Audio mixer  | Pulsemixer |
 | Bluetooth    | Bluetui    |
+| Music player | ncmpcpp    |
 
 ## GUI
 
@@ -55,9 +56,11 @@ Personal Hyprland dotfiles. Managed with GNU Stow.
 | Role              | Tool                   |
 | ----------------- | ---------------------- |
 | Directory jumping | Zoxide                 |
-| Media control     | Playerctl              |
+| Media control     | Playerctl + mpc        |
 | Volume / mute     | wpctl + swayosd-client |
 | SSH keys          | Keychain               |
+| Music daemon      | MPD                    |
+| Bar visualizer    | Cava                   |
 
 ## Keybinds (SUPER + ...)
 
@@ -71,6 +74,7 @@ Personal Hyprland dotfiles. Managed with GNU Stow.
 | `X`       | Terminal (projects)    |
 | `E`       | Yazi file manager      |
 | `M`       | Pulsemixer (float)     |
+| `SHIFT+M` | ncmpcpp (float)        |
 | `W`       | Rofi launcher          |
 | `L`       | Wlogout                |
 | `U`       | Waypaper               |
@@ -83,8 +87,14 @@ Personal Hyprland dotfiles. Managed with GNU Stow.
 ## Deployment
 
 ```bash
+# Dependencies
+sudo dnf install mpd mpc ncmpcpp cava
+
 # User configs (~)
-stow -t ~ hypr kitty rofi waybar yazi wlogout zsh starship swaync
+stow -t ~ hypr kitty rofi waybar yazi wlogout zsh starship swaync mpd ncmpcpp cava
+
+# Create required dirs
+mkdir -p ~/Music ~/.local/share/mpd/playlists
 ```
 
 SDDM theme is installed separately via [sddm-astronaut-theme](https://github.com/keyitdev/sddm-astronaut-theme):

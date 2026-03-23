@@ -89,6 +89,52 @@ window#waybar {
   color: #ff6c11; /* orange */
 }
 
+/* ── Music player ── */
+@keyframes music-glow {
+  0% {
+    color: #ff7edb;
+    text-shadow: 0 0 6px rgba(255, 126, 219, 0.6);
+  }
+  50% {
+    color: #03edf9;
+    text-shadow: 0 0 10px rgba(3, 237, 249, 0.7);
+  }
+  100% {
+    color: #ff7edb;
+    text-shadow: 0 0 6px rgba(255, 126, 219, 0.6);
+  }
+}
+
+#mpd {
+  padding: 0 12px;
+  margin: 0 4px;
+  background: rgba(52, 41, 79, 0.4);
+  border-radius: 10px;
+  color: #ff7edb;
+}
+
+#mpd.playing {
+  animation: music-glow 4s ease-in-out infinite;
+}
+
+#mpd.paused {
+  color: #72f1b8;
+  opacity: 0.65;
+}
+
+/* #mpd.stopped,
+#mpd.disconnected {
+  display: none;
+} */
+
+/* ── Cava visualizer ── */
+#custom-cava {
+  font-size: 12px;
+  padding: 0 10px;
+  color: #03edf9;
+  letter-spacing: 1px;
+}
+
 /* Small transitions */
 * {
   transition: 0.2s ease-in-out;
