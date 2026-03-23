@@ -22,9 +22,10 @@
     "exec": "~/.config/waybar/scripts/weather.sh",
     "return-type": "json",
     "interval": 1800,
+    "signal": 1,
     "tooltip": true,
     "restart-interval": 10,
-    "on-click": "hyprctl dispatch exec '[float;size 1200 1200;center] kitty --hold curl 'wttr.in''"
+    "on-click": "pkill -SIGRTMIN+1 waybar; hyprctl dispatch exec '[float;size 1200 1200;center] kitty --hold curl wttr.in'"
   },
 
   "hyprland/workspaces": {
