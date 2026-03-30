@@ -21,6 +21,13 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$HOME/flowis/programs:$PATH"
 
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "/home/jakub/.bun/_bun" ] && source "/home/jakub/.bun/_bun"
+
 # Aliases (lsd)
 alias ls='lsd'
 alias l='ls -l'
