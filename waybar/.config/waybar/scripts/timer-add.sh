@@ -2,7 +2,7 @@
 STATE="/tmp/waybar_timers"
 
 input=$(rofi -dmenu -p "󱑂 New timer" \
-    -theme-str 'window { width: 400px; } listview { lines: 0; } inputbar { padding: 8px 8px; } entry { placeholder: "15min deep work"; }' \
+    -theme-str 'window { width: 400px; } listview { lines: 0; } inputbar { padding: 8px 8px; } entry { placeholder: "25:00 deep work"; }' \
     < /dev/null)
 # Cancelled (Escape) = rofi exits non-zero; empty input = use default
 [ $? -ne 0 ] && exit 0
@@ -13,11 +13,26 @@ read -r duration label <<< "$input"
 
 seconds=$(python3 -c "
 import re, sys
+from datetime import datetime, timedelta
 s = sys.argv[1].strip()
+
+# Clock time: HH:MM or HH:MM:SS — count down to that time today (tomorrow if passed)
+cm = re.match(r'^(\d{1,2}):(\d{2})(?::(\d{2}))?$', s)
+if cm:
+    h, m, sc = int(cm.group(1)), int(cm.group(2)), int(cm.group(3) or 0)
+    if 0 <= h <= 23 and 0 <= m <= 59 and 0 <= sc <= 59:
+        now = datetime.now()
+        target = now.replace(hour=h, minute=m, second=sc, microsecond=0)
+        if target <= now:
+            target += timedelta(days=1)
+        print(int((target - now).total_seconds()))
+        sys.exit(0)
+
+# Unit format: 5m, 1h30m, 90s, 90 (plain = seconds)
 total = 0
 matched = False
-for m in re.finditer(r'(\d+)\s*([hms]?)', s):
-    val, unit = int(m.group(1)), m.group(2)
+for tok in re.finditer(r'(\d+)\s*([hms]?)', s):
+    val, unit = int(tok.group(1)), tok.group(2)
     if not val:
         continue
     matched = True

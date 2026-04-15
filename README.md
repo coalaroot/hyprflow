@@ -89,12 +89,12 @@ Personal Hyprland dotfiles. Managed with GNU Stow.
 
 Waybar widget with multiple concurrent timers. Background timers with notification + sound on completion.
 
-| Action           | How                                                          |
-| ---------------- | ------------------------------------------------------------ |
-| Add timer        | `SUPER+W` or right-click Waybar widget                       |
-| Cancel timer     | `SUPER+SHIFT+W` or left-click Waybar widget → pick from list |
-| Duration format  | `5m`, `1h30m`, `90s`, `90` (plain = seconds)                 |
-| Label (optional) | Space-separated after duration: `25m deep work`              |
+| Action           | How                                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| Add timer        | `SUPER+W` or right-click Waybar widget                                                          |
+| Cancel timer     | `SUPER+SHIFT+W` or left-click Waybar widget → pick from list                                    |
+| Duration format  | `5m`, `1h30m`, `2m10s`, `90` (plain = seconds), `13:40` (clock time → counts down to that time) |
+| Label (optional) | Space-separated after duration: `25m deep work`                                                 |
 
 ## Deployment
 
