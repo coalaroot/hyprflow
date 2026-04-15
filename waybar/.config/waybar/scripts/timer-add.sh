@@ -2,7 +2,7 @@
 STATE="/tmp/waybar_timers"
 
 input=$(rofi -dmenu -p "󱑂 New timer" \
-    -theme-str 'window { width: 400px; } listview { lines: 0; } inputbar { padding: 8px 8px; } entry { placeholder: "25:00 deep work"; }' \
+    -theme-str 'window { width: 400px; padding: 30px 30px 10px 30px; } listview { lines: 0; } inputbar { padding: 8px 12px; } entry { placeholder: "15min deep work"; }' \
     < /dev/null)
 # Cancelled (Escape) = rofi exits non-zero; empty input = use default
 [ $? -ne 0 ] && exit 0
