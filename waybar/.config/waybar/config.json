@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["clock", "custom/weather"],
+  "modules-left": ["clock", "custom/weather", "custom/timer"],
   "modules-center": ["hyprland/workspaces", "mpd", "custom/cava"],
   "modules-right": [
     "tray",
@@ -16,6 +16,15 @@
     "format": "{:%H:%M ⎯ %A ⎯ %d.%m}",
     "tooltip-format": "{:%A, %d %B %Y}",
     "on-click": "hyprctl dispatch exec '[float;size 1200 1000;center] gnome-calendar'"
+  },
+
+  "custom/timer": {
+    "exec": "~/.config/waybar/scripts/timers.sh",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "~/.config/waybar/scripts/timer-cancel.sh",
+    "on-click-right": "~/.config/waybar/scripts/timer-add.sh",
+    "tooltip": false
   },
 
   "custom/weather": {

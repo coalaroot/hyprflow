@@ -135,6 +135,31 @@ window#waybar {
   letter-spacing: 1px;
 }
 
+/* ── Timer ── */
+#custom-timer {
+  padding: 0 12px;
+  margin: 0 4px;
+  background: rgba(52, 41, 79, 0.4);
+  border-radius: 10px;
+  color: #ffd83d; /* yellow */
+}
+
+#custom-timer.idle {
+  padding: 0;
+  margin: 0;
+}
+
+#custom-timer.done {
+  color: #fe4450; /* red */
+  animation: timer-done-pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes timer-done-pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
 /* Small transitions */
 * {
   transition: 0.2s ease-in-out;

@@ -13,21 +13,21 @@ Personal Hyprland dotfiles. Managed with GNU Stow.
 
 ## Core
 
-| Role                    | Tool            |
-| ----------------------- | --------------- |
-| Terminal                | Kitty           |
-| Shell                   | Zsh             |
-| Prompt                  | Starship        |
-| Bar                     | Waybar          |
-| Launcher                | Rofi            |
-| Notifications           | Swaync          |
-| Wallpaper               | Waypaper + swww |
-| Display layout          | Kanshi          |
+| Role                    | Tool                        |
+| ----------------------- | --------------------------- |
+| Terminal                | Kitty                       |
+| Shell                   | Zsh                         |
+| Prompt                  | Starship                    |
+| Bar                     | Waybar                      |
+| Launcher                | Rofi                        |
+| Notifications           | Swaync                      |
+| Wallpaper               | Waypaper + swww             |
+| Display layout          | Kanshi                      |
 | Display manager         | SDDM (sddm-astronaut-theme) |
-| Lock screen             | Hyprlock        |
-| Logout menu             | Wlogout         |
-| OSD (volume/brightness) | Swayosd         |
-| Screenshots             | Hyprshot        |
+| Lock screen             | Hyprlock                    |
+| Logout menu             | Wlogout                     |
+| OSD (volume/brightness) | Swayosd                     |
+| Screenshots             | Hyprshot                    |
 
 ## TUI
 
@@ -75,7 +75,8 @@ Personal Hyprland dotfiles. Managed with GNU Stow.
 | `E`       | Yazi file manager      |
 | `M`       | Pulsemixer (float)     |
 | `SHIFT+M` | ncmpcpp (float)        |
-| `W`       | Rofi launcher          |
+| `R`       | Rofi launcher          |
+| `W`       | Add timer              |
 | `L`       | Wlogout                |
 | `U`       | Waypaper               |
 | `I`       | Switch keyboard layout |
@@ -83,6 +84,17 @@ Personal Hyprland dotfiles. Managed with GNU Stow.
 | `S`       | Screenshot window      |
 | `SHIFT+S` | Screenshot region      |
 | `Z`       | Scratchpad toggle      |
+
+## Timer
+
+Waybar widget with multiple concurrent timers. Background timers with notification + sound on completion.
+
+| Action           | How                                                          |
+| ---------------- | ------------------------------------------------------------ |
+| Add timer        | `SUPER+W` or right-click Waybar widget                       |
+| Cancel timer     | `SUPER+SHIFT+W` or left-click Waybar widget → pick from list |
+| Duration format  | `5m`, `1h30m`, `90s`, `90` (plain = seconds)                 |
+| Label (optional) | Space-separated after duration: `25m deep work`              |
 
 ## Deployment
 

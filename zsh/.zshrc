@@ -40,7 +40,6 @@ alias e='eza -s=type --icons=always'
 alias cpp='clipcopy'
 alias c='claude'
 alias o='xdg-open'
-timer() { termdown "$@" && notify-send -u critical "Timer done!" && for i in 1 2 3; do paplay /usr/share/sounds/freedesktop/stereo/complete.oga; done }
 
 # Tools
 fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
