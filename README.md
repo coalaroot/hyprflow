@@ -1,6 +1,8 @@
-# hyprflow
+# Hyprflow
 
 Personal Hyprland dotfiles. Managed with GNU Stow.
+
+[![Watch the video](https://img.youtube.com/vi/FE4InjPhrGM/maxresdefault.jpg)](https://www.youtube.com/watch?v=FE4InjPhrGM)
 
 ## System
 
