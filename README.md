@@ -2,6 +2,8 @@
 
 Personal Hyprland dotfiles. Managed with GNU Stow.
 
+## Video
+
 [![Watch the video](https://img.youtube.com/vi/FE4InjPhrGM/0.jpg)](https://www.youtube.com/watch?v=FE4InjPhrGM)
 
 ## System
