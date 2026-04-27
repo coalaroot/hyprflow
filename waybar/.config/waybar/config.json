@@ -34,7 +34,7 @@
     "signal": 1,
     "tooltip": true,
     "restart-interval": 10,
-    "on-click": "pkill -SIGRTMIN+1 waybar; hyprctl dispatch exec '[float;size 1200 1200;center] kitty --hold curl wttr.in'"
+    "on-click": "pkill -SIGRTMIN+1 waybar; hyprctl dispatch exec '[float;size 1200 1100;center] kitty --hold curl wttr.in'"
   },
 
   "hyprland/workspaces": {
