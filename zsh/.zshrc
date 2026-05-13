@@ -40,14 +40,19 @@ alias e='eza -s=type --icons=always'
 alias cpp='clipcopy'
 alias c='claude'
 alias o='xdg-open'
+alias ask='claude -p'
 
 # Tools
-fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
 source <(fzf --zsh)
 source "/home/jakub/.openclaw/completions/openclaw.zsh"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval $(keychain --eval --quiet ~/.ssh/id_ed25519)
+
+if [[ -n $CLAUDE_ASK ]]; then
+  _claude_ask_init() { BUFFER='ask ""'; CURSOR=5 }
+  zle -N zle-line-init _claude_ask_init
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
