@@ -88,6 +88,7 @@ Personal Hyprland dotfiles. Managed with GNU Stow.
 | `S`       | Screenshot window      |
 | `SHIFT+S` | Screenshot region      |
 | `Z`       | Scratchpad toggle      |
+| `/`       | Floating Claude ask    |
 
 ## Timer
 
