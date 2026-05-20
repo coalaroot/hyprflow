@@ -41,6 +41,7 @@ alias cpp='clipcopy'
 alias c='claude'
 alias o='xdg-open'
 alias ask='claude -p'
+alias p='pnpm'
 
 # Tools
 source <(fzf --zsh)
