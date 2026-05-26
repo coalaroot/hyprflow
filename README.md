@@ -75,9 +75,10 @@ Personal Hyprland dotfiles. Managed with GNU Stow.
 | `V`       | Toggle floating        |
 | `A`       | VSCode                 |
 | `C`       | Chrome                 |
-| `X`       | Terminal (projects)    |
+| `X`       | Terminal               |
 | `E`       | Yazi file manager      |
 | `M`       | Pulsemixer (float)     |
+| `B`       | Bluetui (float)        |
 | `SHIFT+M` | ncmpcpp (float)        |
 | `R`       | Rofi launcher          |
 | `W`       | Add timer              |
