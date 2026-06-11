@@ -4,3 +4,4 @@ wallpapers/Pictures/wallpapers/*.png
 wallpapers/Pictures/wallpapers/*.webp
 .claude/
 CLAUDE.md
+*.mp4
