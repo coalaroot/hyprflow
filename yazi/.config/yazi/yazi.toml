@@ -50,3 +50,8 @@ rules = [
   # Fallback
   { url = "*", use = [ "open", "reveal" ] },
 ]
+
+[mgr]
+  sort_by      = "mtime"
+  sort_reverse = true   # newest first
+  sort_dir_first = true # folders on top
