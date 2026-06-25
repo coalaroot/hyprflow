@@ -42,6 +42,7 @@ alias c='claude'
 alias o='xdg-open'
 alias ask='claude -p'
 alias p='pnpm'
+alias cls='clear'
 
 # Tools
 source <(fzf --zsh)
